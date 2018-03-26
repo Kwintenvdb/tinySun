@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using tinySun.Api;
+using tinySun.Models;
 
 namespace tinySun
 {
@@ -11,7 +12,7 @@ namespace tinySun
 		
 		public async void GetCurrentWeather()
 		{
-			var weather = await _client.SendRequest<object>("weather?q=London");
+			var weather = await _client.SendRequest<WeatherData>("weather?q=London");
 		}
 	}
 }

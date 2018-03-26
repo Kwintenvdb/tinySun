@@ -8,4 +8,7 @@
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
+	<StackLayout>
+		<Button Text="Get Weather"/>
+	</StackLayout>
 </ContentPage>
