@@ -2,14 +2,22 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:tinySun"
+			 xmlns:converters="clr-namespace:tinySun.Converters"
+			 xmlns:enums="clr-namespace:tinySun.Enums"
              x:Class="tinySun.MainPage">
 
+	<ContentPage.Resources>
+		<ResourceDictionary>
+			<converters:TemperatureConverter x:Key="tempConverter"/>
+		</ResourceDictionary>
+	</ContentPage.Resources>
+	
 	<Label Text="Welcome to Xamarin!" 
            VerticalOptions="Center" 
            HorizontalOptions="Center" />
 
 	<StackLayout>
 		<Button Text="Get Weather" Command="{Binding GetCurrentWeatherCommand}"/>
-		<Label Text="{Binding CurrentWeather.Main.Temperature}"/>
+		<Label Text="{Binding CurrentWeather.Main.Temperature, Converter={StaticResource tempConverter}, ConverterParameter={x:Static enums:TemperatureUnit.Celsius}}"/>
 	</StackLayout>
 </ContentPage>
