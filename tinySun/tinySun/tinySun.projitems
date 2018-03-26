@@ -23,8 +23,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\WeatherData.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="$(MSBuildThisFileDirectory)ViewModels\" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ForecastViewModel.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModel.cs" />
   </ItemGroup>
 </Project>

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using tinySun.ViewModels;
 using Xamarin.Forms;
 
 namespace tinySun
@@ -12,6 +13,7 @@ namespace tinySun
 		public MainPage()
 		{
 			InitializeComponent();
+			BindingContext = new ForecastViewModel();
 		}
 	}
 }

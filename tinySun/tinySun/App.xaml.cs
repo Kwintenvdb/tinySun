@@ -19,8 +19,6 @@ namespace tinySun
 		protected override void OnStart ()
 		{
 			// Handle when your app starts
-			var dataProvider = new DataProvider();
-			dataProvider.GetCurrentWeather();
 		}
 
 		protected override void OnSleep ()

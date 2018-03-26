@@ -9,6 +9,7 @@
            HorizontalOptions="Center" />
 
 	<StackLayout>
-		<Button Text="Get Weather"/>
+		<Button Text="Get Weather" Command="{Binding GetCurrentWeatherCommand}"/>
+		<Label Text="{Binding CurrentWeather.Main.Temperature}"/>
 	</StackLayout>
 </ContentPage>

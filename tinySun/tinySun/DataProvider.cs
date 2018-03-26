@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 using tinySun.Api;
 using tinySun.Models;
 
@@ -10,9 +11,10 @@ namespace tinySun
 	{
 		private OWMClient _client = new OWMClient();
 		
-		public async void GetCurrentWeather()
+		public async Task<WeatherData> GetCurrentWeather()
 		{
 			var weather = await _client.SendRequest<WeatherData>("weather?q=London");
+			return weather;
 		}
 	}
 }

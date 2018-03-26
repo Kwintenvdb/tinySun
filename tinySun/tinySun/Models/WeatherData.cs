@@ -8,7 +8,7 @@ namespace tinySun.Models
 	public class MainData
 	{
 		[JsonProperty("temp")]
-		public float Temp { get; set; }
+		public float Temperature { get; set; }
 	}
 
 	public class WeatherData
