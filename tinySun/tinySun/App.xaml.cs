@@ -14,15 +14,11 @@ namespace tinySun
 		public App(IAssetLoader assetLoader)
 		{
 			var dataProvider = new DataProvider(assetLoader);
-			using (var reader = new StreamReader(assetLoader.OpenAsset("city.list.json")))
-			{
-				var contents = reader.ReadToEnd();
-				var cities = JsonConvert.DeserializeObject<City[]>(contents);
-				var citiesDictionary = cities.ToDictionary(c => c.Id);
-			}
+			var cityProvider = new CityProvider(assetLoader);
 
 			ServiceProvider.Register<IAssetLoader>(assetLoader);
 			ServiceProvider.Register<DataProvider>(dataProvider);
+			ServiceProvider.Register<CityProvider>(cityProvider);
 
 			InitializeComponent();
 

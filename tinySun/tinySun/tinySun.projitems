@@ -27,6 +27,7 @@
     </Compile>
     <Compile Include="$(MSBuildThisFileDirectory)Models\City.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Models\WeatherData.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Services\CityProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Services\ServiceProvider.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ForecastViewModel.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)ViewModels\ViewModel.cs" />

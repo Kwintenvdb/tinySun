@@ -12,12 +12,16 @@
 		</ResourceDictionary>
 	</ContentPage.Resources>
 	
-	<Label Text="Welcome to Xamarin!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-
 	<StackLayout>
 		<Button Text="Get Weather" Command="{Binding GetCurrentWeatherCommand}"/>
+		<Entry Text="{Binding CityName}"/>
+		<ListView ItemsSource="{Binding SearchCities}">
+			<ListView.ItemTemplate>
+				<DataTemplate>
+					<TextCell Text="{Binding Name}"/>
+				</DataTemplate>
+			</ListView.ItemTemplate>
+		</ListView>
 		<Label Text="{Binding CurrentWeather.Main.Temperature, Converter={StaticResource tempConverter}, ConverterParameter={x:Static enums:TemperatureUnit.Celsius}}"/>
 	</StackLayout>
 </ContentPage>
